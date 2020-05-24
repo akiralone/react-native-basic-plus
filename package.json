@@ -1,0 +1,27 @@
+{
+  "name": "react-native-basic-plus",
+  "version": "0.0.1",
+  "description": "Make it easy to write Text and View on React Native.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "ui",
+    "text",
+    "view"
+  ],
+  "author": "jielong (https://jielong.ink/works)",
+  "license": "MIT",
+  "repository": "https://github.com/jie1ong/react-native-basic-plus.git",
+  "dependencies": {
+    "react-native-dark-mode": "^0.2.2",
+    "react-native-typography": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.62.10",
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  }
+}
