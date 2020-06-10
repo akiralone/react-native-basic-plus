@@ -4,9 +4,9 @@ const customColors = {
     whitePrimary: 'rgba(255,255,255,.78)',
     whiteSecondary: 'rgba(255,255,255,.67)',
     whiteTertiary: 'rgba(255,255,255,.38)',
-    blackPrimary: '#333',
-    blackSecondary: '#737373',
-    blackTertiary: '#b3b2b2',
+    blackPrimary: '#202020',
+    blackSecondary: '#545454',
+    blackTertiary: 'rgba(255,255,255,.38)',
 }
 export const DarkTheme: ThemeProps = {
     background: '#222',
@@ -46,4 +46,22 @@ export const LightTheme: ThemeProps = {
     footnote: customColors.blackTertiary,
     caption1: customColors.blackTertiary,
     caption2: customColors.blackTertiary,
+}
+
+interface CustomColor {
+    light: string;
+    dark: string;
+}
+
+export const primaryColor: CustomColor = {
+    light: customColors.blackPrimary,
+    dark: customColors.whitePrimary
+}
+export const secondaryColor: CustomColor = {
+    light: customColors.blackSecondary,
+    dark: customColors.whiteSecondary
+}
+export const tertiaryColor: CustomColor = {
+    light: customColors.blackTertiary,
+    dark: customColors.whiteTertiary
 }
