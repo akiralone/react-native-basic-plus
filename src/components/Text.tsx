@@ -143,7 +143,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         semibold && systemWeights.semibold,
         bold && systemWeights.bold,
         color && { color: color },
-        customColor && { color: customColor[theme] },
+        !!customColor && { color: customColor[theme] },
         style && style
     ]
 

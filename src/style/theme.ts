@@ -6,13 +6,13 @@ const customColors = {
     whiteTertiary: 'rgba(255,255,255,.38)',
     blackPrimary: '#202020',
     blackSecondary: '#545454',
-    blackTertiary: 'rgba(255,255,255,.38)',
+    blackTertiary: '#bababa',
 }
 export const DarkTheme: ThemeProps = {
     background: '#222',
     contentBackgroundColor: '#000',
     border: 'rgb(39, 39, 41)',
-    line: '#222',
+    line: 'rgba(255,255,255,.1)',
     icon: 'rgba(255,255,255,.75)',
 
     largeTitle: customColors.whitePrimary,
@@ -32,7 +32,7 @@ export const LightTheme: ThemeProps = {
     background: '#f0f0f0',
     contentBackgroundColor: '#fff',
     border: 'rgb(199, 199, 204)',
-    line: '#f0f0f0',
+    line: '#efefef',
     icon: '#545454',
 
     largeTitle: customColors.blackPrimary,
