@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TextProps, TextStyle, Platform } from 'react-native';
-import { human, systemWeights, sanFranciscoSpacing } from 'react-native-typography';
+import { human, systemWeights, sanFranciscoSpacing, sanFranciscoWeights } from 'react-native-typography';
 import { useTheme } from '../hooks/useTheme';
 import { primaryColor, secondaryColor, tertiaryColor } from '../style/theme';
 
@@ -19,6 +19,7 @@ interface TypographyProps extends TextProps {
     thin?: boolean;
     light?: boolean;
     regular?: boolean;
+    medium?: boolean;
     semibold?: boolean;
     bold?: boolean;
     color?: string;
@@ -89,6 +90,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         thin,
         light,
         regular,
+        medium,
         semibold,
         bold,
         size10,
@@ -140,6 +142,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         thin && systemWeights.thin,
         light && systemWeights.light,
         regular && systemWeights.regular,
+        medium && sanFranciscoWeights.medium,
         semibold && systemWeights.semibold,
         bold && systemWeights.bold,
         color && { color: color },
