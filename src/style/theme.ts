@@ -29,7 +29,7 @@ export const DarkTheme: ThemeProps = {
 }
 
 export const LightTheme: ThemeProps = {
-    background: '#f0f0f0',
+    background: '#f7f6f2',
     contentBackgroundColor: '#fff',
     border: 'rgb(199, 199, 204)',
     line: '#efefef',
