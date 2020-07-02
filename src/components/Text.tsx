@@ -100,11 +100,11 @@ function generatorFontSize(size: number): TextStyle {
 
 const getFontWeightByName = {
     thin: Platform.OS === 'ios' ? '100' : '200',
-    light: Platform.OS === 'ios' ? '200' : '300',
-    regular: Platform.OS === 'ios' ? '300' : '400',
-    medium: Platform.OS === 'ios' ? '400' : '500',
-    semibold: Platform.OS === 'ios' ? '500' : '600',
-    bold: Platform.OS === 'ios' ? '600' : '700'
+    light: Platform.OS === 'ios' ? '300' : '400',
+    regular: Platform.OS === 'ios' ? '400' : '500',
+    medium: Platform.OS === 'ios' ? '500' : '600',
+    semibold: Platform.OS === 'ios' ? '600' : '700',
+    bold: Platform.OS === 'ios' ? '700' : 'bold'
 }
 
 type FontWeightNameProps = keyof typeof getFontWeightByName
