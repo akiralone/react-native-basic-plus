@@ -293,4 +293,7 @@ buck-out/
 .buckversion
 .fakebuckversion
 
+## example
+example/*
+
 # End of https://www.gitignore.io/api/reactnative
