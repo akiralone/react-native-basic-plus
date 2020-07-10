@@ -35,7 +35,7 @@ const colors = {
     }
 }
 export const DarkTheme: ThemeProps = {
-    background: colors.dark.bgSecondary,
+    background: colors.dark.bgPrimary,
     contentBackgroundColor: colors.dark.bgPrimary,
     border: 'rgb(39, 39, 41)',
     line: 'rgba(255,255,255,.1)',
@@ -65,7 +65,7 @@ export const DarkTheme: ThemeProps = {
 }
 
 export const LightTheme: ThemeProps = {
-    background: colors.light.bgSecondary,
+    background: colors.light.bgPrimary,
     contentBackgroundColor: colors.light.bgPrimary,
     border: 'rgb(199, 199, 204)',
     line: '#efefef',
