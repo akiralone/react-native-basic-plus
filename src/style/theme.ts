@@ -1,14 +1,6 @@
 import { ThemeProps } from "../types";
 
 const colors = {
-    whitePrimary: 'rgba(255,255,255,.78)',
-    whiteSecondary: 'rgba(255,255,255,.67)',
-    whiteTertiary: 'rgba(255,255,255,.38)',
-    whiteQuarternary: 'rgba(255,255,255,.38)',
-    blackPrimary: '#202020',
-    blackSecondary: '#545454',
-    blackTertiary: '#bababa',
-    blackQuarternary: '#bababa',
     // 'dark' meaning under darkmode
     dark: {
         textPrimary: 'rgba(255,255,255,.78)',
@@ -41,18 +33,6 @@ export const DarkTheme: ThemeProps = {
     line: 'rgba(255,255,255,.1)',
     icon: 'rgba(255,255,255,.75)',
 
-    largeTitle: colors.whitePrimary,
-    title1: colors.whitePrimary,
-    title2: colors.whitePrimary,
-    title3: colors.whitePrimary,
-    headline: colors.whiteSecondary,
-    body: colors.whiteSecondary,
-    callout: colors.whiteTertiary,
-    subhead: colors.whiteTertiary,
-    footnote: colors.whiteTertiary,
-    caption1: colors.whiteTertiary,
-    caption2: colors.whiteTertiary,
-
     textColor1: colors.dark.textPrimary,
     textColor2: colors.dark.textSecondary,
     textColor3: colors.dark.textTertiary,
@@ -71,18 +51,6 @@ export const LightTheme: ThemeProps = {
     line: '#efefef',
     icon: '#545454',
 
-    largeTitle: colors.blackPrimary,
-    title1: colors.blackPrimary,
-    title2: colors.blackPrimary,
-    title3: colors.blackPrimary,
-    headline: colors.blackSecondary,
-    body: colors.blackSecondary,
-    callout: colors.blackTertiary,
-    subhead: colors.blackTertiary,
-    footnote: colors.blackTertiary,
-    caption1: colors.blackTertiary,
-    caption2: colors.blackTertiary,
-
     textColor1: colors.light.textPrimary,
     textColor2: colors.light.textSecondary,
     textColor3: colors.light.textTertiary,
@@ -100,36 +68,36 @@ interface CustomColor {
 }
 
 export const bg1: CustomColor = {
-    light: colors.whitePrimary,
-    dark: colors.blackPrimary
+    light: colors.light.bgPrimary,
+    dark: colors.dark.bgPrimary
 }
 export const bg2: CustomColor = {
-    light: colors.whiteSecondary,
-    dark: colors.blackSecondary
+    light: colors.light.bgSecondary,
+    dark: colors.dark.bgSecondary
 }
 export const bg3: CustomColor = {
-    light: colors.whiteTertiary,
-    dark: colors.blackTertiary
+    light: colors.light.bgTertiary,
+    dark: colors.dark.bgTertiary
 }
 export const bg4: CustomColor = {
-    light: colors.whiteQuarternary,
-    dark: colors.blackQuarternary
+    light: colors.light.bgQuarternary,
+    dark: colors.dark.bgQuarternary
 }
 
 export const textColor1: CustomColor ={
-    light: colors.blackPrimary,
-    dark: colors.whitePrimary
+    light: colors.light.textPrimary,
+    dark: colors.light.textPrimary
 }
 
 export const textColor2: CustomColor = {
-    light: colors.blackSecondary,
-    dark: colors.whiteSecondary
+    light: colors.light.textSecondary,
+    dark: colors.dark.textSecondary
 }
 export const textColor3: CustomColor = {
-    light: colors.blackTertiary,
-    dark: colors.whiteTertiary
+    light: colors.light.textTertiary,
+    dark: colors.dark.textTertiary
 }
 export const textColor4: CustomColor = {
-    light: colors.blackQuarternary,
-    dark: colors.whiteQuarternary
+    light: colors.light.textQuarternary,
+    dark: colors.dark.textQuarternary
 }

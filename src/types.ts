@@ -15,18 +15,6 @@ export interface ThemeProps {
     line: string;
     icon: string;
 
-    largeTitle: string;
-    title1: string;
-    title2: string;
-    title3: string;
-    headline: string;
-    body: string;
-    callout: string;
-    subhead: string;
-    footnote: string;
-    caption1: string;
-    caption2: string;
-
     textColor1: string;
     textColor2: string;
     textColor3: string;
