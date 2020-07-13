@@ -1,8 +1,7 @@
 import React from 'react';
 import { Text, TextProps, TextStyle, Platform } from 'react-native';
-import { human, systemWeights, sanFranciscoSpacing, sanFranciscoWeights } from 'react-native-typography';
+import { human, sanFranciscoSpacing } from 'react-native-typography';
 import { useTheme } from '../hooks/useTheme';
-import { primaryColor, secondaryColor, tertiaryColor } from '../style/theme';
 
 interface TypographyProps extends TextProps {
     largeTitle?: boolean;
@@ -203,9 +202,6 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         size28 && generatorFontSize(28),
         size29 && generatorFontSize(29),
         size30 && generatorFontSize(30),
-        primary && { color: primaryColor[theme] },
-        secondary && { color: secondaryColor[theme] },
-        tertiary && { color: tertiaryColor[theme] },
         textColor1 && { color: colors.textColor1 },
         textColor2 && { color: colors.textColor2 },
         textColor3 && { color: colors.textColor3 },
