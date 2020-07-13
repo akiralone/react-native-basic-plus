@@ -99,21 +99,21 @@ interface CustomColor {
     dark: string;
 }
 
-export const primaryColor: CustomColor = {
-    light: colors.blackPrimary,
-    dark: colors.whitePrimary
+export const bg1: CustomColor = {
+    light: colors.whitePrimary,
+    dark: colors.blackPrimary
 }
-export const secondaryColor: CustomColor = {
-    light: colors.blackSecondary,
-    dark: colors.whiteSecondary
+export const bg2: CustomColor = {
+    light: colors.whiteSecondary,
+    dark: colors.blackSecondary
 }
-export const tertiaryColor: CustomColor = {
-    light: colors.blackTertiary,
-    dark: colors.whiteTertiary
+export const bg3: CustomColor = {
+    light: colors.whiteTertiary,
+    dark: colors.blackTertiary
 }
-export const quarternaryColor: CustomColor = {
-    light: colors.blackQuarternary,
-    dark: colors.whiteQuarternary
+export const bg4: CustomColor = {
+    light: colors.whiteQuarternary,
+    dark: colors.blackQuarternary
 }
 
 export const textColor1: CustomColor ={
