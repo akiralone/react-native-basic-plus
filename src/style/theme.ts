@@ -35,7 +35,7 @@ const colors = {
     }
 }
 export const DarkTheme: ThemeProps = {
-    background: colors.dark.bgPrimary,
+    background: colors.dark.bgSecondary,
     contentBackgroundColor: colors.dark.bgPrimary,
     border: 'rgb(39, 39, 41)',
     line: 'rgba(255,255,255,.1)',
@@ -65,7 +65,7 @@ export const DarkTheme: ThemeProps = {
 }
 
 export const LightTheme: ThemeProps = {
-    background: colors.light.bgPrimary,
+    background: colors.light.bgSecondary,
     contentBackgroundColor: colors.light.bgPrimary,
     border: 'rgb(199, 199, 204)',
     line: '#efefef',
@@ -111,6 +111,10 @@ export const tertiaryColor: CustomColor = {
     light: colors.blackTertiary,
     dark: colors.whiteTertiary
 }
+export const quarternaryColor: CustomColor = {
+    light: colors.blackQuarternary,
+    dark: colors.whiteQuarternary
+}
 
 export const textColor1: CustomColor ={
     light: colors.blackPrimary,
@@ -124,4 +128,8 @@ export const textColor2: CustomColor = {
 export const textColor3: CustomColor = {
     light: colors.blackTertiary,
     dark: colors.whiteTertiary
+}
+export const textColor4: CustomColor = {
+    light: colors.blackQuarternary,
+    dark: colors.whiteQuarternary
 }
