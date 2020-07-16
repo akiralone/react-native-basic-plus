@@ -1,20 +1,8 @@
 import React from 'react';
 import { Text, TextProps, TextStyle, Platform } from 'react-native';
-import { human, sanFranciscoSpacing } from 'react-native-typography';
 import { useTheme } from '../hooks/useTheme';
 
 interface TypographyProps extends TextProps {
-    largeTitle?: boolean;
-    title1?: boolean;
-    title2?: boolean;
-    title3?: boolean;
-    headline?: boolean;
-    body?: boolean;
-    callout?: boolean;
-    subhead?: boolean;
-    footnote?: boolean;
-    caption1?: boolean;
-    caption2?: boolean;
     thin?: boolean;
     light?: boolean;
     regular?: boolean;
@@ -56,15 +44,6 @@ interface TypographyProps extends TextProps {
     textColor4?: boolean;
 }
 
-function generatorFontStyle(style: string): TextStyle {
-    const { colors } = useTheme();
-
-    return {
-        ...human[style],
-        color: colors[style]
-    }
-}
-
 const getLineHeightBySize = {
     10: 11,
     11: 13,
@@ -92,8 +71,7 @@ const getLineHeightBySize = {
 function generatorFontSize(size: number): TextStyle {
     return {
         fontSize: size,
-        lineHeight: getLineHeightBySize[size],
-        letterSpacing: Platform.OS === "ios" ? sanFranciscoSpacing(size) : undefined,
+        lineHeight: getLineHeightBySize[size]
     }
 }
 
@@ -118,17 +96,6 @@ function generatorFontWeight(name: FontWeightNameProps): TextStyle {
 const Typography: React.FunctionComponent<TypographyProps> = (props) => {
     const { theme, colors } = useTheme();
     const {
-        largeTitle,
-        title1,
-        title2,
-        title3,
-        headline,
-        body,
-        callout,
-        subhead,
-        footnote,
-        caption1,
-        caption2,
         thin,
         light,
         regular,
@@ -170,17 +137,6 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         ...rest } = props;
 
     const textStyle: Array<TextStyle | any> = [
-        largeTitle && generatorFontStyle('largeTitle'),
-        title1 && generatorFontStyle('title1'),
-        title2 && generatorFontStyle('title2'),
-        title3 && generatorFontStyle('title3'),
-        headline && generatorFontStyle('headline'),
-        body && generatorFontStyle('body'),
-        callout && generatorFontStyle('callout'),
-        subhead && generatorFontStyle('subhead'),
-        footnote && generatorFontStyle('footnote'),
-        caption1 && generatorFontStyle('caption1'),
-        caption2 && generatorFontStyle('caption2'),
         size10 && generatorFontSize(10),
         size11 && generatorFontSize(11),
         size12 && generatorFontSize(12),
