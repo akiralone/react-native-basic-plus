@@ -16,7 +16,7 @@ const colors = {
     // 'light' meaning under lightmode
     light: {
         textPrimary: '#202020',
-        textSecondary: '#545454',
+        textSecondary: '#737373',
         textTertiary: '#bababa',
         textQuarternary: '#bababa',
 
