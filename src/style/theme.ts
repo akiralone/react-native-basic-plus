@@ -18,7 +18,7 @@ const colors = {
         textPrimary: '#202020',
         textSecondary: '#737373',
         textTertiary: '#bababa',
-        textQuarternary: '#bababa',
+        textQuarternary: '#efefef',
 
         bgPrimary: '#fff',
         bgSecondary: '#fafafa',
