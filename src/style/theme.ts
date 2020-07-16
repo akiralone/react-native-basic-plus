@@ -17,7 +17,7 @@ const colors = {
     light: {
         textPrimary: '#202020',
         textSecondary: '#737373',
-        textTertiary: '#bababa',
+        textTertiary: '#b3b2b2',
         textQuarternary: '#efefef',
 
         bgPrimary: '#fff',
