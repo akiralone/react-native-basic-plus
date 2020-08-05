@@ -15,14 +15,14 @@ const colors = {
     },
     // 'light' meaning under lightmode
     light: {
-        textPrimary: '#202020',
-        textSecondary: '#737373',
-        textTertiary: '#b3b2b2',
+        textPrimary: '#333',
+        textSecondary: '#666',
+        textTertiary: '#bbb',
         textQuarternary: '#efefef',
 
         bgPrimary: '#fff',
         bgSecondary: '#fafafa',
-        bgTertiary: '#f0f0f0',
+        bgTertiary: '#ededed',
         bgQuarternary: '#efefef',
     }
 }
