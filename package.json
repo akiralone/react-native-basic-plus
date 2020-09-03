@@ -1,6 +1,6 @@
 {
   "name": "react-native-basic-plus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Make it easy to write Text and View on React Native.",
   "main": "src/index.ts",
   "scripts": {
