@@ -1,17 +1,17 @@
 import React, { useReducer, useContext } from 'react';
-import { useDarkMode } from 'react-native-dynamic';
 import ThemeStateContext from './ThemeStateContext';
 import reducers from './reducers';
+import useColorScheme from '../hooks/useColorSchme';
 
 const ThemeStateProvider: React.FC = ({ children }) => {
     const initialState = useContext(ThemeStateContext)
     const [state, dispatch] = useReducer(reducers, initialState)
-    const isDarkMode = useDarkMode()
+    const theme = useColorScheme()
 
     return (
         <ThemeStateContext.Provider value={{
             ...state,
-            theme: isDarkMode ? 'dark' : 'light',
+            theme,
             dispatch: dispatch
         }}>
             {children}
