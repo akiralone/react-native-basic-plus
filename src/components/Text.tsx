@@ -14,6 +14,7 @@ interface TypographyProps extends TextProps {
         light: string;
         dark: string;
     };
+    marginTop?: number;
     size10?: boolean;
     size11?: boolean;
     size12?: boolean;
@@ -102,6 +103,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         medium,
         semibold,
         bold,
+        marginTop,
         size10,
         size11,
         size12,
@@ -173,6 +175,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         bold && generatorFontWeight('bold'),
         color && { color: color },
         !!customColor && { color: customColor[theme] },
+        marginTop && { marginTop: marginTop },
         style && style
     ]
 
