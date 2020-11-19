@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps, TextStyle, Platform } from 'react-native';
+import { Text, TextProps, TextStyle, Platform, NativeModules } from 'react-native';
 import { useTheme } from '../hooks/useTheme';
 
 interface TypographyProps extends TextProps {
@@ -94,6 +94,19 @@ function generatorFontWeight(name: FontWeightNameProps): TextStyle {
     }
 }
 
+function isMiUi12() {
+    if(Platform.OS === 'android' && NativeModules.PlatformConstants){
+        const fingerprint = NativeModules.PlatformConstants.Fingerprint && NativeModules.PlatformConstants.Fingerprint.toLowerCase();
+      
+        // MiUi12 fingerprint:Xiaomi/cmi/cmi:10/QKQ1.191117.002/V12.0.1.0.QJACNXM:user/release-keys
+        if(fingerprint && fingerprint.startsWith('xiaomi') && fingerprint.indexOf('v12')!==-1){
+            return true;
+        }
+    }
+   
+    return false;
+}
+
 const Typography: React.FunctionComponent<TypographyProps> = (props) => {
     const { theme, colors } = useTheme();
     const {
@@ -174,6 +187,7 @@ const Typography: React.FunctionComponent<TypographyProps> = (props) => {
         semibold && generatorFontWeight('semibold'),
         bold && generatorFontWeight('bold'),
         color && { color: color },
+        isMiUi12() && {fontFamily: ''},
         !!customColor && { color: customColor[theme] },
         marginTop && { marginTop: marginTop },
         style && style
