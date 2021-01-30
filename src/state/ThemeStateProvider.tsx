@@ -1,7 +1,7 @@
-import React, { useReducer, useContext } from 'react';
-import ThemeStateContext from './ThemeStateContext';
-import reducers from './reducers';
-import useColorScheme from '../hooks/useColorSchme';
+import React, { useReducer, useContext } from 'react'
+import ThemeStateContext from './ThemeStateContext'
+import reducers from './reducers'
+import useColorScheme from '../hooks/useColorSchme'
 
 interface ThemeStateProviderProps {
   textColors?: TextThemeColorProps;
@@ -33,4 +33,4 @@ const ThemeStateProvider: React.FC<ThemeStateProviderProps> = ({
   )
 }
 
-export default ThemeStateProvider;
+export default ThemeStateProvider

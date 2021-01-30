@@ -7,10 +7,10 @@ interface LineProps extends ViewProps {
 }
 
 const Line = ({ height, style, ...rest}: LineProps) => {
-  const { colors, theme } = useTheme()
+  const { othersColor, theme } = useTheme()
   const lineStyle = useMemo(() => ([
     {
-      backgroundColor: colors[theme].line,
+      backgroundColor: othersColor.line,
       height: height || 1
     },
     style

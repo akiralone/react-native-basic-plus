@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
-import { View, ViewProps } from 'react-native';
-import { useTheme } from '../hooks/useTheme';
+import React, { useMemo } from 'react'
+import { View, ViewProps } from 'react-native'
+import { useTheme } from '../hooks/useTheme'
 
 interface BlockProps extends ViewProps {
     customColor?: {
@@ -15,11 +15,11 @@ const Block: React.FC<BlockProps> = ({
     children,
     ...rest
 }) => {
-    const { isDarkMode, theme } = useTheme();
+    const { isDarkMode, theme } = useTheme()
     const backgroundColor = !!customColor ? customColor[theme] : undefined;
     const viewStyle = useMemo(() => !!style
         ? [{ backgroundColor }, style]
-        : { backgroundColor }, [isDarkMode, style]);
+        : { backgroundColor }, [isDarkMode, style])
 
     return (
         <View style={viewStyle} {...rest}>

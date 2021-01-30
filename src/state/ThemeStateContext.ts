@@ -1,10 +1,10 @@
-import { createContext } from "react";
+import { createContext } from "react"
 
 const initState: StateProps = {
     theme: 'light',
     dispatch: function(action: ActionProps): void{}
 }
 
-const ThemeStateContext = createContext(initState);
+const ThemeStateContext = createContext(initState)
 
 export default ThemeStateContext;

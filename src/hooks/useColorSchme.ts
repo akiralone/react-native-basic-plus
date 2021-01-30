@@ -6,4 +6,4 @@ const useColorScheme = (): 'light' | 'dark' => {
   return theme || 'light'
 }
 
-export default useColorScheme;
+export default useColorScheme

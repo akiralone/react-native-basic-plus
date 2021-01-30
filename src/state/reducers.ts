@@ -10,4 +10,4 @@ const reducers = (preState: StateProps, actions: ActionProps) => {
     }
 }
 
-export default reducers;
+export default reducers
