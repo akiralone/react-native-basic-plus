@@ -14,8 +14,8 @@ const Container: React.FC<ContainerProps> = ({
   children,
   style,
   ...rest }) => {
-  const { colors, isDarkMode, theme } = useTheme();
-  const backgroundColor = !!customColor ? customColor[theme] : colors.background;
+  const { bgColors, isDarkMode, theme } = useTheme();
+  const backgroundColor = !!customColor ? customColor[theme] : bgColors.bgColor2;
   const viewStyle = useMemo(() => !!style
     ? [{ backgroundColor, flex: 1 }, style]
     : { backgroundColor, flex: 1 }, [isDarkMode, style]);
