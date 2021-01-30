@@ -1,5 +1,3 @@
-import { ThemeProps } from "../types";
-
 const colors = {
     // 'dark' meaning under darkmode
     dark: {

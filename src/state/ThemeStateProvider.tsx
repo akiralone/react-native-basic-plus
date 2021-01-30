@@ -3,20 +3,34 @@ import ThemeStateContext from './ThemeStateContext';
 import reducers from './reducers';
 import useColorScheme from '../hooks/useColorSchme';
 
-const ThemeStateProvider: React.FC = ({ children }) => {
-    const initialState = useContext(ThemeStateContext)
-    const [state, dispatch] = useReducer(reducers, initialState)
-    const theme = useColorScheme()
+interface ThemeStateProviderProps {
+  textColors?: TextThemeColorProps;
+  bgColors?: BgThemeColorProps;
+  othersColor?: OthersThemeColorProps;
+}
 
-    return (
-        <ThemeStateContext.Provider value={{
-            ...state,
-            theme,
-            dispatch: dispatch
-        }}>
-            {children}
-        </ThemeStateContext.Provider>
-    )
+const ThemeStateProvider: React.FC<ThemeStateProviderProps> = ({
+  children,
+  textColors,
+  bgColors,
+  othersColor
+}) => {
+  const initialState = useContext(ThemeStateContext)
+  const [state, dispatch] = useReducer(reducers, initialState)
+  const theme = useColorScheme()
+
+  return (
+    <ThemeStateContext.Provider value={{
+      ...state,
+      theme,
+      textColors,
+      bgColors,
+      othersColor,
+      dispatch: dispatch
+    }}>
+      {children}
+    </ThemeStateContext.Provider>
+  )
 }
 
 export default ThemeStateProvider;

@@ -12,9 +12,9 @@
     "text",
     "view"
   ],
-  "author": "jielong (https://jielong.ink/works)",
+  "author": "jielong (https://twitter.com/amia1one)",
   "license": "MIT",
-  "repository": "https://github.com/jie1ong/react-native-basic-plus.git",
+  "repository": "https://github.com/amialone/react-native-basic-plus.git",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.9.43",
