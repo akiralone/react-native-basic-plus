@@ -1,4 +1,5 @@
 import { createContext } from "react"
+import { ActionProps, StateProps } from "../types";
 
 const initState: StateProps = {
     theme: 'light',

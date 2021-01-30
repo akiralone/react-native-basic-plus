@@ -1,4 +1,4 @@
-interface StateProps {
+export interface StateProps {
   theme: 'light' | 'dark';
   textColors?: TextThemeColorProps;
   bgColors?: BgThemeColorProps;
@@ -6,12 +6,12 @@ interface StateProps {
   dispatch: (action: ActionProps) => void;
 }
 
-interface ActionProps {
+export interface ActionProps {
   type: string;
   value?: any;
 }
 
-interface ThemeProps {
+export interface ThemeProps {
   background: string;
   contentBackgroundColor: string;
   border: string;
@@ -29,37 +29,37 @@ interface ThemeProps {
   bgColor4: string;
 }
 
-interface TextColorProps {
+export interface TextColorProps {
   textColor1: string;
   textColor2: string;
   textColor3: string;
   textColor4: string;
 }
 
-interface TextThemeColorProps {
+export interface TextThemeColorProps {
   light: TextColorProps;
   dark: TextColorProps
 }
 
-interface BgColorProps {
+export interface BgColorProps {
   bgColor1: string;
   bgColor2: string;
   bgColor3: string;
   bgColor4: string;
 }
 
-interface BgThemeColorProps {
+export interface BgThemeColorProps {
   light: BgColorProps;
   dark: BgColorProps
 }
 
-interface OthersColorProps {
+export interface OthersColorProps {
   line: string;
   icon: string;
   border: string;
 }
 
-interface OthersThemeColorProps {
+export interface OthersThemeColorProps {
   light: OthersColorProps;
   dark: OthersColorProps
 }

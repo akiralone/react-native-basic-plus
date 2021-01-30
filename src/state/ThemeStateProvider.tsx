@@ -2,6 +2,7 @@ import React, { useReducer, useContext } from 'react'
 import ThemeStateContext from './ThemeStateContext'
 import reducers from './reducers'
 import useColorScheme from '../hooks/useColorSchme'
+import { BgThemeColorProps, OthersThemeColorProps, TextThemeColorProps } from '../types'
 
 interface ThemeStateProviderProps {
   textColors?: TextThemeColorProps;

@@ -1,3 +1,5 @@
+import { TextThemeColorProps } from "../types"
+
 const defaultTextColors: TextThemeColorProps = {
   dark: {
     textColor1: 'rgba(255,255,255,.78)',

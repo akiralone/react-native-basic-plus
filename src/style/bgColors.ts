@@ -1,3 +1,5 @@
+import { BgThemeColorProps } from "../types"
+
 const defaultBgColors: BgThemeColorProps = {
   dark: {
     bgColor1: '#121212',

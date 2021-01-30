@@ -1,3 +1,5 @@
+import { OthersThemeColorProps } from "../types"
+
 const defaultOthersColor: OthersThemeColorProps = {
   dark: {
     border: 'rgb(39, 39, 41)',

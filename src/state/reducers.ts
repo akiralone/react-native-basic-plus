@@ -1,3 +1,5 @@
+import { ActionProps, StateProps } from "../types"
+
 const reducers = (preState: StateProps, actions: ActionProps) => {
     switch (actions.type) {
         case 'SET_THEME':

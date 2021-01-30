@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { Platform, Text, TextProps } from 'react-native'
-import { generatorFontSize, isMiUi12 } from '../helpers'
+import { generatorFontSize, isMiUi12, Size } from '../helpers'
 import { useTheme } from '../hooks/useTheme'
 
 interface TextPlusProps extends TextProps {
@@ -11,7 +11,7 @@ interface TextPlusProps extends TextProps {
   color?: string;
   medium?: boolean;
   bold?: boolean;
-  size?: number;
+  size?: Size;
   marginTop?: number;
   marginBottom?: number;
 }
