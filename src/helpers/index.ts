@@ -1,7 +1,9 @@
 import { Platform, NativeModules } from "react-native"
 import textLineHeight from "../style/textLineHeight"
 
-function generatorFontSize(size: number) {
+type Size = keyof typeof textLineHeight
+
+function generatorFontSize(size: Size) {
   return {
       fontSize: size,
       lineHeight: textLineHeight[size]
