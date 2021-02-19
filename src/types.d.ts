@@ -57,6 +57,7 @@ export interface OthersColorProps {
   line: string;
   icon: string;
   border: string;
+  highlight: string;
 }
 
 export interface OthersThemeColorProps {
