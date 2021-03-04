@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Platform, Text, TextProps } from 'react-native'
+import { Platform, StyleProp, Text, TextProps, TextStyle } from 'react-native'
 import { generatorFontSize, isMiUi12, Size } from '../helpers'
 import { useTheme } from '../hooks/useTheme'
 
@@ -32,7 +32,7 @@ const TextPlus: React.FC<TextPlusProps> = ({
   ...rest }) => {
   const { textColors, theme } = useTheme()
   const isAndroid = useMemo(() => Platform.OS === 'android', [])
-  const textStyle = useMemo(() => {
+  const textStyle = useMemo<StyleProp<TextStyle>>(() => {
     return ([
       textColor1 && { color: textColors.textColor1 },
       textColor2 && { color: textColors.textColor2 },
@@ -47,7 +47,7 @@ const TextPlus: React.FC<TextPlusProps> = ({
       isMiUi12() && { fontFamily: '' },
       style
     ])
-  }, [theme])
+  }, [theme, style])
 
   return (
     <Text
