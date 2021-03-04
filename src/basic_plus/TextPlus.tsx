@@ -47,7 +47,7 @@ const TextPlus: React.FC<TextPlusProps> = ({
       isMiUi12() && { fontFamily: '' },
       style
     ])
-  }, [theme, style])
+  }, [theme, style, color, size, medium, bold, marginBottom, marginTop])
 
   return (
     <Text
