@@ -1,16 +1,19 @@
-# React Native Basic Plus
+<h1 align="center">
+  <a href="https://reactnative.dev/">
+    React Native Basic Plus
+  </a>
+</h1>
 
-Make it easy to use Text and View on React Native, and support Dark Mode.
+<p align="center">
+  Make it easy to use Text and View on React Native, and support Dark Mode.
+</p>
+
 
 ## Installation
 
 ```
 yarn add react-native-basic-plus
-# or
-npm install react-native-basic-plus
 ```
-
-> Also, you need to install [react-native-dark-mode](https://github.com/codemotionapps/react-native-dark-mode), and follow the installation instructions.
 
 ## Usage
 
@@ -34,17 +37,11 @@ const App = () => {
 };
 
 const Example = () => { return (
-    <Container safe>
+    <Container>
       <Text largeTitle semibold customColor={{light: '#000', dark: '#fff'}}>LargeTitle 巨大的标题加粗</Text>
-      <Text title1>Title1 标题测试</Text>
-      <Text title2>Title2 标题测试</Text>
-      <Text title3>Title3 标题测试</Text>
-      <Text headline bold>Headline 标题测试</Text>
-      <Text body>Body 标题测试</Text>
-      <Text callout>Callout 标题测试</Text>
-      <Text footnote>Footnote 标题测试</Text>
-      <Text caption1>Caption1 标题测试</Text>
-      <Text caption2>Caption2 标题测试</Text>
+      <Text size={30} textColor1 bold>Title1 标题测试</Text>
+      <Text size={24} textColor2 medium>Title2 标题测试</Text>
+      <Text size={20} textColor3>Title3 标题测试</Text>
     </Container>
   )
 }
@@ -60,39 +57,63 @@ export default App;
 
 #### `Container`
 
-name | description | required | default
+name | description | required | type
 --- | --- | --- | ---
-safe | use [SafeAreaView](https://reactnative.dev/docs/safeareaview) component | false | false
-customColor | custom backgroundColor | false | [theme](https://github.com/jie1ong/react-native-basic-plus/src/style/theme.ts) background color
+customColor | custom backgroundColor | false | string
 
 #### `Text`
 
-Use [react-native-typography](https://github.com/hectahertz/react-native-typography) Human Text Style.
-
-name | description | required | default
+name | description | required | type
 --- | --- | --- | ---
-customColor | custom backgroundColor | false | [theme](https://github.com/jie1ong/react-native-basic-plus/src/style/theme.ts) text color
-
-#### `View`
-
-name | description | required | default
---- | --- | --- | ---
-customColor | custom backgroundColor | false | [theme](https://github.com/jie1ong/react-native-basic-plus/src/style/theme.ts) color
+color | custom backgroundColor | false | string
+size | fontSize | false | number
+textColor1 | font color | false | boolean
+textColor2 | font color | false | boolean
+textColor3 | font color | false | boolean
+textColor4 | font color | false | boolean
 
 ## Hooks
 
 #### `useTheme`
 
 ```tsx
+import React, { useMemo } from 'react';
 import { useTheme } from 'react-native-basic-plus';
 
 function Component() {
-    const { isDarkMode, colors, theme } = useTheme();
+    const { textColors, bgColors, othersColor, isDarkMode, theme } = useTheme();
 
     // do something theme style code
+    const containerStyle = useMemo(() => ({
+      backgroundColor: bgColors.bgColor1[theme]
+    }), [theme])
 
     return (
-        <View />
+        <View style={containerStyle}>
+          ...
+        <View/>
+    )
+}
+```
+
+## Custom Colors
+
+```tsx
+
+import { ThemeStateProvider } from 'react-native-basic-plus';
+
+function Component() {
+    const textColors: TextColorProps = { ... }
+    const bgColors: BgColorProps = { ... }
+    const othersColor: OthersColorProps = { ... }
+
+    return (
+        <ThemeStateProvider
+          textColors={textColors}
+          bgColors={bgColors}
+          othersColor={othersColor}>
+          ...
+        </ThemeStateProvider>
     )
 }
 ```
@@ -102,14 +123,9 @@ function Component() {
 - [x] basic use.
 - [ ] add more props and components.
 
-<h2 id="built-with">Built With ❤️</h2>
-
-- [react-native-dark-mode](https://github.com/codemotionapps/react-native-dark-mode)
-- [react-native-typography](https://github.com/hectahertz/react-native-typography)
-
 ## Author
 
-- [jielong](https://jieling.ink/)
+- [alone](https://twitter.com/amia1one)
 
 ## License
 
